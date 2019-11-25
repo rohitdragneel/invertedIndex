@@ -22,7 +22,7 @@ class Index {
                 
                 while( (ln = file.readLine()) !=null) {
                     String[] words = ln.split("\\W+");
-                    String[] paras=ln.split("/t");
+                    String[] paras=ln.split("/n/n");
                     //use  tab for the new paragraph if not change the above code to /n
                     for(String para:paras){
                         //System.out.println(para);
