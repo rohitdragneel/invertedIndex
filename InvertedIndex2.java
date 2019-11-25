@@ -23,9 +23,9 @@ class Index {
                 while( (ln = file.readLine()) !=null) {
                     String[] words = ln.split("\\W+");
                     String[] paras=ln.split("/t");
-                    
+                    //use  tab for the new paragraph if not change the above code to /n
                     for(String para:paras){
-                        System.out.println(para);
+                        //System.out.println(para);
                         sources.put(i,para);
                         j++;
                     
@@ -65,6 +65,7 @@ class Index {
          //   System.out.println("key="+sources.get(key));
             System.out.println("\t"+sources.get(num));
         }
+        res.clear();
     }
 }
 
@@ -80,5 +81,6 @@ public class InvertedIndex2 {
         String phrase = in.readLine();
 
         index.find(phrase);
+    
 	}
 }
