@@ -17,12 +17,12 @@ class Index {
             
             try(BufferedReader file = new BufferedReader(new FileReader(fileName)))
             {
-                //sources.put(i,fileName);
+                
                 String ln;
                 
                 while( (ln = file.readLine()) !=null) {
                     String[] words = ln.split("\\W+");
-                    String[] paras=ln.split("/n/n");
+                    String[] paras=ln.split("\\n");
                     //use  tab for the new paragraph if not change the above code to /n
                     for(String para:paras){
                         //System.out.println(para);
@@ -62,7 +62,7 @@ class Index {
         for(int num : res){
             brk++;
             if(brk==10) break;
-         //   System.out.println("key="+sources.get(key));
+            System.out.println("key="+num);
             System.out.println("\t"+sources.get(num));
         }
         res.clear();
