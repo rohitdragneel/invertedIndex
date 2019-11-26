@@ -60,7 +60,7 @@ class Index {
         System.out.println("Found in: ");
         int limit=0;
         for(int num : res){
-          // if(limit==10)break;
+          if(limit==10)break;
             System.out.println("key="+num);
             System.out.println("\t"+sources.get(num));
             if(sources.get(num)!=null){
