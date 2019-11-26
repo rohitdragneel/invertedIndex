@@ -58,12 +58,14 @@ class Index {
             return;
         }
         System.out.println("Found in: ");
-        int brk=0;
+        int limit=0;
         for(int num : res){
-            brk++;
-            if(brk==10) break;
+          // if(limit==10)break;
             System.out.println("key="+num);
             System.out.println("\t"+sources.get(num));
+            if(sources.get(num)!=null){
+                    limit++;
+            }
         }
         res.clear();
     }
